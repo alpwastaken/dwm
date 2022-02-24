@@ -1,0 +1,14 @@
+--- /dev/null
++++ /dev/null
+@@ -36,8 +36,11 @@ static const float mfact     = 0.55; /*
+ static const int nmaster     = 1;    /* number of clients in master area */
+ static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+ 
++#include "fibonacci.c"
+ static const Layout layouts[] = {
+ 	/* symbol     arrange function */
++ 	{ "[@]",      spiral },
++ 	{ "[\\]",     dwindle },
+ 	{ "[]=",      tile },    /* first entry is default */
+ 	{ "><>",      NULL },    /* no layout function means floating behavior */
+ 	{ "[M]",      monocle },
