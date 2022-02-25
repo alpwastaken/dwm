@@ -2,13 +2,15 @@
 
 /* See LICENSE file for copyright and license details. */
 
+#include "/home/alp/.cache/wal/colors-wal-dwm.h"
+
 /* appearance */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int swallowfloating    = 0; 
 static const int showsystray        = 1;     /* 0 means no systray */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 0;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -18,21 +20,11 @@ static const unsigned int ulinepad	= 5;	/* horizontal padding between the underl
 static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */
 static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the bar the line should appear */
 static const int ulineall 		= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
-static const char *fonts[]		=	{ "scientifica:size=12" ,"Hack Nerd Font:size=9" };
+static const char *fonts[]		=	{ "CozetteVector:style=Regular:size=10:antialias=true:autohint=true" };
 // static const ichar *fonts[]			=	{ "scientifica Nerd Font:size=11" };
 // static const char *fonts[]			=	{ "JetBrainsMonoMedium Nerd Font:size=10" };
 static const char dmenufont[]       = "Hack Nerd Font:size=12";
-static const char col_gray1[]       = "#ada6a1"; //100914 prev #00020e    
-static const char col_gray2[]       = "#f5ede9"; //ab7ac0 prev a45a30 df4418  c5cce1 #4f10d6 #ffb86c #fabd2f
-static const char col_gray3[]       = "#262320"; // prev d5c4a1 #ff79c6 % prev #808080
-static const char col_gray4[]       = "#d65d0e"; //ab7ac0 a45a30 4eb500 prev f72504 #ffb86c & prev #6ccc8f & 4b78ff
-static const char *colors[][3]      = {
-    /*               fg         bg         border   */
-    [SchemeNorm] = { col_gray3, col_gray1, col_gray2 }, // prev col_cyan
-    [SchemeSel]  = { col_gray4, col_gray1,  col_gray2  },
-//    [SchemeWarn] =   { "#d3869b", col_gray1, col_gray2 },
-//    [SchemeUrgent]=  { "#8ec07c", col_gray1,    col_gray2 },
-};
+
 
 /* tagging */
 // static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
