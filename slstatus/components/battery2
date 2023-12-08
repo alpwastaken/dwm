@@ -1,0 +1,34 @@
+#!/bin/bash
+
+    batstatus=""
+    for bat in /sys/class/power_supply/BAT0; do
+
+        cap="$(<$bat/capacity)"
+        stat="$(<$bat/status)"
+        
+        i=""
+
+        if [ "$stat" = "Charging" ]; then
+            i=""
+        elif [ "$cap" -le 14 ]; then
+            i=""
+        elif [ "$cap" -le 24 ]; then
+            i=""
+        elif [ "$cap" -le 34 ]; then
+            i=""
+        elif [ "$cap" -le 44 ]; then
+            i=""
+        elif [ "$cap" -le 54 ]; then
+            i=""
+        elif [ "$cap" -le 64 ]; then
+            i=""
+        elif [ "$cap" -le 74 ]; then
+            i=""
+        elif [ "$cap" -le 84 ]; then
+            i=""
+        elif [ "$cap" -le 94 ]; then
+            i=""
+        fi
+        batstatus="${batstatus}${i} ${cap}% "
+    done
+        printf "%s\n" "${batstatus}"
